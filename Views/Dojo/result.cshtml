@@ -1,0 +1,28 @@
+@using Dojosurvey_Model.Models;
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Hello!</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+
+<body>
+
+    <form action="back" method="post">
+        <div class="info">
+            <p><strong>Your Name : </strong> @Model.Name</p>
+            <p>Dojo Location : @Model.Location</p>
+            <p>Favourite Language : @Model.Language</p>
+            @if(Model.Comment != null)
+    {
+        <p><strong>Comment: </strong>@Model.Comment</p>
+    }
+            @* <p>Comments : @Model.Comments</p><br> *@
+            <button type="submit">Back</button>
+        </div>
+    </form>
+</body>
+
+</html>
